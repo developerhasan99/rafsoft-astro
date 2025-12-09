@@ -1,6 +1,7 @@
 ---
+import Image from "astro/components/Image.astro";
 import bgImg from "./images/hero-bg.jpg";
-import winImg from "./images/windows.webp";
+import winImg from "./images/windows.png";
 ---
 
 <section
@@ -58,10 +59,7 @@ import winImg from "./images/windows.webp";
 					</div>
 					<div class="flex gap-2 opacity-80">
 						<div>
-							<img
-								src="../sections/images/windows.png"
-								alt="windows image"
-							/>
+							<Image src={winImg} alt="Windows Logos" />
 						</div>
 					</div>
 					<div class="flex flex-wrap gap-4 mt-6">

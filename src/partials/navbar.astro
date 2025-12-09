@@ -1,0 +1,146 @@
+---
+import Image from "astro/components/Image.astro";
+import logo from "./images/logo.png";
+
+const menuItems = [
+	{
+		label: "Start",
+		url: "/",
+	},
+	{
+		label: "Oferta",
+	},
+	{
+		label: "Pobierz Programy",
+		url: "/bezplatne-wersje-demonstracyjne/",
+	},
+	{
+		label: "Sklep",
+		url: "/cennik-faktura-vat/",
+	},
+	{
+		label: "Blog",
+		url: "/blog/",
+	},
+	{
+		label: "Pomoc",
+		url: "/kontakt/",
+	},
+];
+---
+
+<nav
+	class="fixed top-0 w-full z-50 transition-all duration-300 bg-transparent text-white py-6"
+>
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+		<div class="flex items-center justify-between">
+			<div class="shrink-0 flex items-center">
+				<a href="/">
+					<Image
+						src={logo}
+						alt="Faktura VAT"
+						height={logo.height}
+						width={logo.width}
+					/>
+				</a>
+			</div>
+			<div class="hidden md:flex items-center space-x-6">
+				<button
+					class="text-white hover:text-[#19abbd] font-medium text-[16px] focus:text-[#19abbd] cursor-pointer"
+				>
+					Start
+				</button>
+				<div class="relative group">
+					<button
+						class="text-white hover:text-[#19abbd] font-medium text-[16px] focus:text-[#19abbd] flex items-center gap-1"
+					>
+						Oferta
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							class="lucide lucide-chevron-down w-3 h-3 text-blue-200"
+							aria-hidden="true"
+						>
+							<path d="m6 9 6 6 6-6"></path>
+						</svg>
+					</button>
+				</div>
+				<button
+					class="text-white hover:text-[#19abbd] font-medium text-[16px] focus:text-[#19abbd] cursor-pointer"
+				>
+					Pobierz Programy</button
+				><button
+					class="text-white hover:text-[#19abbd] font-medium text-[16px] focus:text-[#19abbd] cursor-pointer"
+				>
+					Sklep</button
+				><button
+					class="text-white hover:text-[#19abbd] font-medium text-[16px] focus:text-[#19abbd] cursor-pointer"
+				>
+					Blog</button
+				><button
+					class="text-white hover:text-[#19abbd] font-medium text-[16px] focus:text-[#19abbd] cursor-pointer"
+				>
+					Pomoc
+				</button>
+				<div class="relative">
+					<button
+						class="flex items-center gap-2 border-l pl-4 border-blue-500 focus:outline-none cursor-pointer"
+					>
+						<img
+							alt="PL"
+							class="w-6 h-auto shadow-sm"
+							src="https://flagcdn.com/w40/pl.png"
+						/><svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							class="lucide lucide-chevron-down w-3 h-3 text-white hover:text-[#19abbd] cursor-pointer"
+							aria-hidden="true"
+						>
+							<path d="m6 9 6 6 6-6"></path>
+						</svg>
+					</button>
+				</div>
+				<button
+					class="bg-[#d41717] hover:bg-[#c60808] text-white px-5 py-2.5 rounded text-sm font-bold transition-colors shadow-lg cursor-pointer"
+				>
+					Bezpłatne wersje programów
+				</button>
+			</div>
+			<div class="md:hidden">
+				<button class="text-white">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="24"
+						height="24"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						class="lucide lucide-menu w-6 h-6"
+						aria-hidden="true"
+					>
+						<path d="M4 5h16"></path>
+						<path d="M4 12h16"></path>
+						<path d="M4 19h16"></path>
+					</svg>
+				</button>
+			</div>
+		</div>
+	</div>
+</nav>

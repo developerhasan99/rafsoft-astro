@@ -7,7 +7,7 @@ import winImg from "./images/windows.png";
 <section
 	id="home"
 	style={`background-image: url('${bgImg.src}');`}
-	class="bg-hero-pattern bg-[#04549c] bg-cover bg-center text-white pt-32 pb-32 relative overflow-hidden"
+	class="bg-hero-pattern bg-[#04549c] bg-cover bg-center text-white sm:pt-[150px] sm:pb-[120px] py-32 relative overflow-hidden"
 >
 	<div class="absolute bottom-0 left-0 w-full h-16 bg-white z-10"></div>
 	<div
@@ -79,10 +79,8 @@ import winImg from "./images/windows.png";
 						>
 					</div>
 				</div>
-				<div class="relative group cursor-pointer mt-8 space-y-12">
-					<div
-						class="bg-white p-1 shadow-2xl transform transition-transform"
-					>
+				<div class="relative group cursor-pointer mt-8">
+					<div class="bg-white shadow-2xl">
 						<video
 							id="volPlayer"
 							class="vol-player"

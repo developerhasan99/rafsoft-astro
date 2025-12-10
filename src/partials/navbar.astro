@@ -1,0 +1,210 @@
+---
+import { Image } from "astro:assets";
+import logo from "./images/logo.png";
+
+const menuItems = [
+	{ label: "Start", url: "/" },
+	{
+		label: "Oferta",
+		children: [
+			{
+				category: "Programy do faktur - Windows",
+				links: [
+					{
+						label: "Faktura VAT 2026 START",
+						url: "/program-faktura-vat-start/",
+					},
+					{
+						label: "Faktura VAT 2026 STANDARD",
+						url: "/program-faktura-vat-standard/",
+					},
+					{
+						label: "Faktura VAT 2026 PRO",
+						url: "/program-faktura-vat-pro/",
+					},
+					{
+						label: "Porównaj funkcje i ceny naszych programów",
+						url: "/cennik-faktura-vat/",
+					},
+					{
+						label: "Co nowego w programie?",
+						url: "/co-nowege-w-programie-do-fakturowania/",
+					},
+					{
+						label: "Fakturowanie z magazynem",
+						url: "/program-faktura-vat-pro/",
+					},
+					{ label: "Program do Umów", url: "/program-do-umow/" },
+					{
+						label: "HDI - Handlowy dokument identyfikacyjny",
+						url: "/handlowy-dokument-identyfikacyjny-hdi/",
+					},
+				],
+			},
+			{
+				category: "Programy do faktur - Online",
+				links: [
+					{
+						label: "Mobilna Faktura (wersja BETA)",
+						url: "/fakturowanie-online/",
+					},
+					{
+						label: "Synchronizacja z Mobilna Faktura",
+						url: "/eksport-i-import-danych-do-mobilna-faktura-pl-synchronizacja/",
+					},
+					{
+						label: "Cennik",
+						url: "/cennik-faktura-vat/",
+					},
+				],
+			},
+		],
+	},
+	{ label: "Pobierz Programy", url: "/bezplatne-wersje-demonstracyjne/" },
+	{ label: "Sklep", url: "/cennik-faktura-vat/" },
+	{ label: "Blog", url: "/blog/" },
+	{ label: "Pomoc", url: "/kontakt/" },
+];
+---
+
+<nav
+	class="fixed top-0 w-full z-50 transition-all duration-300 bg-transparent text-white py-6"
+>
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+		<div class="flex items-center justify-between">
+			<!-- LOGO -->
+			<div class="shrink-0 flex items-center">
+				<a href="/">
+					<Image
+						src={logo}
+						alt="Faktura VAT"
+						height={logo.height}
+						width={logo.width}
+						loading="eager"
+					/>
+				</a>
+			</div>
+
+			<!-- DESKTOP MENU -->
+			<div class="hidden md:flex items-center space-x-6">
+				{
+					menuItems.map((item) => {
+						if (item.children) {
+							// Oferta dropdown
+							return (
+								<div class="relative group">
+									<button class="text-white hover:text-[#007281] font-medium text-[16px] flex items-center gap-1">
+										{item.label}
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											class="lucide lucide-chevron-down w-3 h-3 text-blue-200"
+											viewBox="0 0 24 24"
+											fill="none"
+											stroke="currentColor"
+											stroke-width="2"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+										>
+											<path d="m6 9 6 6 6-6" />
+										</svg>
+									</button>
+
+									<div class="absolute left-0 top-full hidden group-hover:block bg-[#192a3d] text-white rounded-lg shadow-lg p-4 w-max">
+										<ul class="flex gap-4">
+											{item.children.map((cat) => (
+												<li class="menu-item">
+													<p class="font-semibold text-gray-200">
+														{cat.category}
+													</p>
+													<ul class="mt-2 border-l border-gray-600 pl-4 space-y-1">
+														{cat.links.map(
+															(link) => (
+																<li>
+																	<a
+																		href={
+																			link.url
+																		}
+																		class="block hover:text-[#19abbd]"
+																	>
+																		{
+																			link.label
+																		}
+																	</a>
+																</li>
+															)
+														)}
+													</ul>
+												</li>
+											))}
+										</ul>
+									</div>
+								</div>
+							);
+						} else {
+							return (
+								<a
+									href={item.url}
+									class="text-white hover:text-[#19abbd] font-medium text-[16px]"
+								>
+									{item.label}
+								</a>
+							);
+						}
+					})
+				}
+			</div>
+
+			<!-- LANGUAGE + CTA -->
+			<div class="hidden md:flex items-center space-x-4">
+				<div class="relative">
+					<button
+						class="flex items-center gap-2 border-l pl-4 border-blue-500"
+					>
+						<img
+							alt="PL"
+							class="w-6 h-auto shadow-sm"
+							src="https://flagcdn.com/w40/pl.png"
+						/>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="lucide lucide-chevron-down w-3 h-3 text-white"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						>
+							<path d="m6 9 6 6 6-6"></path>
+						</svg>
+					</button>
+				</div>
+				<button
+					class="bg-[#d41717] hover:bg-[#c60808] text-white px-5 py-2.5 rounded text-sm font-bold shadow-lg"
+				>
+					Bezpłatne wersje programów
+				</button>
+			</div>
+
+			<!-- MOBILE MENU BUTTON -->
+			<div class="md:hidden">
+				<button class="text-white">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						class="lucide lucide-menu w-6 h-6"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+					>
+						<path d="M4 5h16"></path>
+						<path d="M4 12h16"></path>
+						<path d="M4 19h16"></path>
+					</svg>
+				</button>
+			</div>
+		</div>
+	</div>
+</nav>

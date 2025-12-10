@@ -1,5 +1,6 @@
 ---
-import "../styles/global.css"
+import { AstroFont } from "astro-font";
+import "../styles/global.css";
 ---
 
 <!doctype html>
@@ -9,10 +10,25 @@ import "../styles/global.css"
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
 		<meta name="generator" content={Astro.generator} />
+		<AstroFont
+			config={[
+				{
+					src: [],
+					name: "Poppins",
+					// Google Fonts URL
+					googleFontsURL:
+						"https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,400;1,700&display=swap",
+					preload: true,
+					display: "swap",
+					selector: "body",
+					fallback: "sans-serif",
+				},
+			]}
+		/>
+
 		<title>Rafsoft Net website</title>
 	</head>
 	<body>
-
 		<slot />
 	</body>
 </html>

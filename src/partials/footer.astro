@@ -1,0 +1,151 @@
+---
+const footerColumns = [
+  {
+    title: "Produkty",
+    links: [
+      { label: "Faktura VAT 2026 START", url: "/program-faktura-vat-start/" },
+      { label: "Faktura VAT 2026 STANDARD", url: "/program-faktura-vat-standard/" },
+      { label: "Program do faktur z magazynem", url: "/program-faktura-vat-pro/" },
+      { label: "Fakturowanie online - Mobilna Faktura", url: "/fakturowanie-online/" },
+      { label: "Fakturowanie z magazynem", url: "/program-faktura-vat-pro/" },
+    ],
+  },
+  {
+    title: "Program do faktur",
+    links: [
+      { label: "Co nowego w programie do fakturowania?", url: "/co-nowege-w-programie-do-fakturowania/" },
+      {
+        label: "Porównanie wersji programu do faktur - Faktura VAT",
+        url: "/cennik-faktura-vat/",
+      },
+      { label: "Wystawianie faktur - Lista faktur", url: "/wystawianie-faktur/" },
+      { label: "Program do faktur - Funkcje", url: "/program-do-faktur-funkcje/" },
+      { label: "Jaki program do faktur wybrać?", url: "/jaki-program-do-faktur/" },
+    ],
+  },
+  {
+    title: "Poradnik",
+    links: [
+      {
+        label: "Split payment, mechanizm podzielonej płatności",
+        url: "/split-payment-podzielona-platnosc-vat/",
+      },
+      {
+        label: "Spis z natury, remanent, opis druku",
+        url: "/spis-z-natury-remanent-opis-druku/",
+      },
+      {
+        label: "Numerowanie faktur - Jak numerować faktury?",
+        url: "/numerowanie-faktur/",
+      },
+      { label: "Wzór faktury VAT", url: "/wzor-faktury-vat/" },
+      { label: "Dokument WZ - wydanie zewnętrzne", url: "/dokument-wz/" },
+    ],
+  },
+  {
+    title: "Blog",
+    links: [
+      { label: "Przetarg - czym jest?", url: "/przetarg-czym-jest/" },
+      { label: "Faktura VAT 0% - co musisz wiedzieć?", url: "/faktura-vat-0-co-musisz-wiedziec/" },
+      { label: "Koszty ogólnego zarządu", url: "/koszty-ogolnego-zarzadu/" },
+      { label: "Czym są derywaty i jak działają?", url: "/czym-sa-derywaty-i-jak-dzialaja/" },
+      {
+        label: "Wysyłka plików JPK za pomocą Profilu Zaufanego",
+        url: "/wysylka-plikow-jpk-za-pomoca-profilu-zaufanego/",
+      },
+    ],
+  },
+];
+---
+
+<footer class="bg-[#273238]">
+  {/* top columns */}
+  <div
+    class="max-w-7xl mx-auto px-6 pt-16 pb-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+  >
+    {
+      footerColumns.map((col) => (
+        <div>
+          <h4 class="text-white text-2xl font-medium mb-6">{col.title}</h4>
+          <ul class="space-y-3">
+            {col.links.map((link) => (
+              <li>
+                <a href={link.url} class="text-white text-sm md:text-base hover:text-[#19abbd]">
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))
+    }
+  </div>
+
+  {/* bottom bar */}
+  <div class="bg-[#212b30]">
+    <div
+      class="max-w-7xl mx-auto px-6 mt-16 py-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-start md:items-center gap-8"
+    >
+      <p class="text-[#909da4] text-[15px]">
+        © Copyright RAFSOFT.NET 2002-2025. Mapa strony | All Right Reserved.
+      </p>
+
+      <div class="flex  gap-4">
+        <a
+          href="https://www.facebook.com/rafsoftnet-116798445016643"
+          class="group w-10 h-10 rounded-full bg-[#18abbd] hover:bg-white flex items-center justify-center cursor-pointer transition"
+          aria-label="Facebook"
+        >
+          <svg
+            class="fill-white transition group-hover:fill-[#18abbd]"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            aria-hidden="true"
+          >
+            <path
+              d="M20,10.1c0-5.5-4.5-10-10-10S0,4.5,0,10.1c0,5,3.7,9.1,8.4,9.9v-7H5.9v-2.9h2.5V7.9C8.4,5.4,9.9,4,12.2,4
+         c1.1,0,2.2,0.2,2.2,0.2v2.5h-1.3c-1.2,0-1.6,0.8-1.6,1.6v1.9h2.8L13.9,13h-2.3v7C16.3,19.2,20,15.1,20,10.1z"
+            ></path>
+          </svg>
+        </a>
+
+        <a
+          href="https://twitter.com/rafsoftNET"
+          class="group w-10 h-10 rounded-full bg-[#18abbd] hover:bg-white flex items-center justify-center cursor-pointer transition"
+          aria-label="Twitter"
+        >
+          <svg
+            class="fill-white transition group-hover:fill-[#18abbd]"
+            width="16px"
+            height="16px"
+            viewBox="0 0 20 20"
+            aria-hidden="true"
+          >
+            <path
+              d="M2.9 0C1.3 0 0 1.3 0 2.9v14.3C0 18.7 1.3 20 2.9 20h14.3c1.6 0 2.9-1.3 2.9-2.9V2.9C20 1.3 18.7 0 17.1 0H2.9zm13.2 3.8L11.5 9l5.5 7.2h-4.3l-3.3-4.4-3.8 4.4H3.4l5-5.7-5.3-6.7h4.4l3 4 3.5-4h2.1zM14.4 15 6.8 5H5.6l7.7 10h1.1z"
+            ></path>
+          </svg>
+        </a>
+
+        <a
+          href="https://www.youtube.com/user/rafsoftNET"
+          class="group w-10 h-10 rounded-full bg-[#18abbd] hover:bg-white flex items-center justify-center cursor-pointer transition"
+          aria-label="YouTube"
+        >
+          <svg
+            class="fill-white transition group-hover:fill-[#18abbd]"
+            width="16px"
+            height="16px"
+            viewBox="0 0 20 20"
+            aria-hidden="true"
+          >
+            <path
+              d="M15,0H5C2.2,0,0,2.2,0,5v10c0,2.8,2.2,5,5,5h10c2.8,0,5-2.2,5-5V5C20,2.2,17.8,0,15,0z M14.5,10.9l-6.8,3.8c-0.1,0.1-0.3,0.1-0.5,0.1c-0.5,0-1-0.4-1-1l0,0V6.2c0-0.5,0.4-1,1-1c0.2,0,0.3,0,0.5,0.1l6.8,3.8c0.5,0.3,0.7,0.8,0.4,1.3C14.8,10.6,14.6,10.8,14.5,10.9z"
+            ></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>

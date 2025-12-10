@@ -17,7 +17,7 @@ import winImg from "./images/windows.png";
 		class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 flex flex-col items-center text-center"
 	>
 		<h1
-			class="text-4xl text-white font-bold mb-6 tracking-tight leading-tight"
+			class="text-4xl text-white font-semibold mb-6 tracking-tight leading-tight"
 		>
 			Program do faktur - Faktura VAT 2026 KSeF
 		</h1>
@@ -25,7 +25,7 @@ import winImg from "./images/windows.png";
 			class="text-white text-[16px] mb-14 font-medium leading-[2.1] word-spacing-[4px] text-shadow-[0_0_10px_rgb(0_0_0_/.3)] tracking-wider"
 		>
 			Prosty program do fakturowania dla małych i średnich firm<br /><span
-				class="text-[#808080] text-[16px] font-bold leading-[2.3] word-spacing-[4px] opacity-80 block text-shadow-black"
+				class="text-[#808080] text-[16px] font-semibold leading-[2.3] word-spacing-[4px] opacity-80 block text-shadow-black"
 				>Program do faktur z magazynem. Mała Księgowość, KPiR, CRM
 				<br />
 				Faktury, pro-forma, rachunki, paragony...
@@ -36,33 +36,30 @@ import winImg from "./images/windows.png";
 				class="grid md:grid-cols-2 gap-12 w-full mt-8 items-center text-left"
 			>
 				<div class="space-y-12">
-					<div>
+					<div class="flex flex-col mb-3">
 						<h3 class="text-lg font-semibold mb-3">
 							Oferta naszych programów do faktur:
 						</h3>
 						<ul
-							class="space-y-2 text-[#19ABBD] font-semibold text-lg"
+							class="space-y-2 text-[#19ABBD] font-medium text-lg"
 						>
 							<li class="flex items-center gap-2">
-								<span class="font-bold">1.</span> Faktura VAT 2026
-								START
+								<span>1.</span> Faktura VAT 2026 START
 							</li>
 							<li class="flex items-center gap-2">
-								<span class="font-bold">2.</span> Faktura VAT 2026
-								STANDARD
+								<span>2.</span> Faktura VAT 2026 STANDARD
 							</li>
 							<li class="flex items-center gap-2">
-								<span class="font-bold">3.</span> Faktura VAT 2026
-								PRO
+								<span>3.</span> Faktura VAT 2026 PRO
 							</li>
 						</ul>
 					</div>
-					<div class="flex gap-2 opacity-80">
+					<div class="flex gap-2 opacity-80 mb-0">
 						<div>
 							<Image src={winImg} alt="Windows Logos" />
 						</div>
 					</div>
-					<div class="flex flex-wrap gap-4 mt-6">
+					<div class="flex flex-wrap gap-4 mt-4">
 						<button
 							class="bg-white text-black hover:bg-[#69727d] font-medium py-3 px-8 cursor-pointer rounded shadow-lg transition-all flex items-center gap-2"
 							><svg

@@ -1,0 +1,137 @@
+---
+import ChevronLeftIcon from "./icons/chevron-left.astro";
+import ChevronRightIcon from "./icons/chevron-right.astro";
+import TestimonialBGImage from "./images/client_bg1.jpg";
+
+const testimonials = [
+  {
+    quote:
+      "Program naprawdę przypadł mi do gustu, przyjazny interfejs, łatwość obsługi, skumulowanie tylko najpotrzebniejszych funkcjonalności i to mi właśnie odpowiada...",
+    author: "Mariusz W.",
+  },
+  {
+    quote:
+      "Bardzo intuicyjny program, świetne wsparcie techniczne i szybka pomoc w razie problemów.",
+    author: "Anna K.",
+  },
+  {
+    quote:
+      "Korzystamy w firmie od kilku lat. Stabilny, prosty i robi dokładnie to, czego potrzebujemy.",
+    author: "Piotr S.",
+  },
+];
+---
+
+<section
+  style={`background-image: url(${TestimonialBGImage.src});`}
+  class="py-24 text-center relative"
+>
+  <div class="relative max-w-5xl mx-auto px-6">
+    <h2 class="text-3xl font-medium text-[#222] mb-8">Opinie Klientów</h2>
+
+    <div class="relative overflow-hidden">
+      <!-- SLIDER TRACK -->
+      <div
+        data-testimonial-track
+        class="flex transition-transform duration-500 ease-out"
+      >
+        {
+          testimonials.map((t) => (
+            <figure class="min-w-full px-4">
+              <blockquote class="text-lg text-[#222] italic mb-8 font-light leading-relaxed">
+                “{t.quote}”
+              </blockquote>
+              <cite class="block font-semibold text-3xl not-italic text-[#222]">
+                {t.author}
+              </cite>
+            </figure>
+          ))
+        }
+      </div>
+
+      <!-- DOTS -->
+      <div class="flex justify-center gap-2 mt-4">
+        {
+          testimonials.map((_, index) => (
+            <button
+              type="button"
+              data-testimonial-dot={index}
+              class={
+                index === 0
+                  ? "w-2 h-2 rounded-full bg-[#007aff]"
+                  : "w-2 h-2 rounded-full bg-[#209faf]"
+              }
+              aria-label={`Przejdź do opinii ${index + 1}`}
+            />
+          ))
+        }
+      </div>
+
+      <!-- BUTTONS -->
+      <button
+        type="button"
+        data-testimonial-prev
+        class="absolute left-0 top-1/2 -translate-y-1/2 p-2 border hover:bg-white/20 rounded hidden md:block"
+      >
+        <ChevronLeftIcon />
+      </button>
+
+      <button
+        type="button"
+        data-testimonial-next
+        class="absolute right-0 top-1/2 -translate-y-1/2 p-2 border hover:bg-white/20 rounded hidden md:block"
+      >
+        <ChevronRightIcon />
+      </button>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const track = document.querySelector("[data-testimonial-track]");
+    if (!track) return;
+
+    const slides = Array.from(track.children);
+    const dots = Array.from(
+      document.querySelectorAll("[data-testimonial-dot]")
+    );
+    const prevBtn = document.querySelector("[data-testimonial-prev]");
+    const nextBtn = document.querySelector("[data-testimonial-next]");
+
+    if (!slides.length || !dots.length) return;
+
+    let current = 0;
+    const total = slides.length;
+
+    const ACTIVE = "bg-[#007aff]";
+    const INACTIVE = "bg-[#209faf]";
+
+    const goToSlide = (index) => {
+      if (index < 0) index = total - 1;
+      if (index >= total) index = 0;
+      current = index;
+
+      track.style.transform = `translateX(-${current * 100}%)`;
+
+      dots.forEach((dot, i) => {
+        dot.classList.remove(ACTIVE, INACTIVE);
+        dot.classList.add(i === current ? ACTIVE : INACTIVE);
+      });
+    };
+
+    prevBtn?.addEventListener("click", () => {
+      goToSlide(current - 1);
+    });
+
+    nextBtn?.addEventListener("click", () => {
+      goToSlide(current + 1);
+    });
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener("click", () => goToSlide(index));
+    });
+
+    goToSlide(0);
+  });
+</script>

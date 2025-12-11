@@ -9,6 +9,7 @@ import ProstyProgramSection from "./sections/prosty-program.astro";
 import PricingSection from "./sections/pricing.astro";
 import ProductDrescription from "./sections/product-drescription.astro";
 import CounterSection from "./sections/counter.astro";
+import TestimonialSection from "./sections/testimonial.astro";
 ---
 
 <Layout>
@@ -27,65 +28,9 @@ import CounterSection from "./sections/counter.astro";
 
 		<CounterSection/>
 		
+		<TestimonialSection/>
 		
-		<section id="reviews" class="bg-sky-400 py-24 text-center">
-			<div class="max-w-4xl mx-auto px-6">
-				<h2 class="text-3xl font-bold text-raf-dark mb-12">
-					Opinie Klientów
-				</h2><div class="relative">
-					<blockquote
-						class="text-xl md:text-2xl text-raf-dark italic mb-8 font-light leading-relaxed"
-					>
-						"Program naprawdę przypadł mi do gustu, przyjazny
-						interfejs, łatwość obsługi, skumulowanie tylko
-						najpotrzebniejszych funkcjonalności i to mi właśnie
-						odpowiada..."
-					</blockquote><cite
-						class="block font-bold text-lg not-italic text-raf-dark"
-						>Mariusz W.</cite
-					><div class="flex justify-center gap-2 mt-2">
-						<span class="w-1.5 h-1.5 bg-raf-dark rounded-full"
-						></span><span
-							class="w-1.5 h-1.5 bg-raf-dark/50 rounded-full"
-						></span><span
-							class="w-1.5 h-1.5 bg-raf-dark/50 rounded-full"
-						></span>
-					</div><button
-						class="absolute left-0 top-1/2 -translate-y-1/2 p-2 border border-raf-dark/20 text-raf-dark hover:bg-white/20 rounded hidden md:block"
-						><svg
-							xmlns="http://www.w3.org/2000/svg"
-							width="24"
-							height="24"
-							viewBox="0 0 24 24"
-							fill="none"
-							stroke="currentColor"
-							stroke-width="2"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							class="lucide lucide-chevron-left"
-							aria-hidden="true"
-							><path d="m15 18-6-6 6-6"></path></svg
-						></button
-					><button
-						class="absolute right-0 top-1/2 -translate-y-1/2 p-2 border border-raf-dark/20 text-raf-dark hover:bg-white/20 rounded hidden md:block"
-						><svg
-							xmlns="http://www.w3.org/2000/svg"
-							width="24"
-							height="24"
-							viewBox="0 0 24 24"
-							fill="none"
-							stroke="currentColor"
-							stroke-width="2"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							class="lucide lucide-chevron-right"
-							aria-hidden="true"
-							><path d="m9 18 6-6-6-6"></path></svg
-						></button
-					>
-				</div>
-			</div>
-		</section><section id="blog" class="py-24 bg-gray-50">
+		<section id="blog" class="py-24 bg-gray-50">
 			<div class="max-w-6xl mx-auto px-6">
 				<div class="text-center mb-16">
 					<h2 class="text-3xl font-bold text-gray-800">Blog</h2><p

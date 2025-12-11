@@ -5,7 +5,14 @@
   --link-hover: #007281;
 }
 
-body {
+@layer base {
+  body {
     color: #707070;
+  }
+  a {
+    color: var(--link);
+  }
+  a:hover {
+    color: var(--link-hover);
+  }
 }
-

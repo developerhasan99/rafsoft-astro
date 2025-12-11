@@ -1,0 +1,89 @@
+---
+import FolderIcon from "./icons/folder-icon.astro";
+import DealIcon from "./icons/deal-icon.astro";
+import BulbIcon from "./icons/bulb-icon.astro";
+import bgImage from "./images/counter.jpg";
+
+const CounterInfo = [
+  {
+    icon: FolderIcon,
+    value: 356267,
+    subtitle: "Pobranych wersji demo",
+  },
+  {
+    icon: DealIcon,
+    value: 83428,
+    subtitle: "Liczba zakupionych licencji",
+  },
+  {
+    icon: BulbIcon,
+    value: 21,
+    subtitle: "Lat na rynku",
+  },
+];
+---
+
+<section
+  class="relative text-white py-20 bg-cover bg-center"
+  style={`background-image: url(${bgImage.src});`}
+>
+  <div
+    class="relative max-w-6xl mx-auto px-6 grid lg:grid-cols-3 gap-12 text-center"
+  >
+    {
+      CounterInfo.map((info) => (
+        <div class="flex gap-8 items-center">
+          <info.icon />
+          <div>
+            <div
+              class="text-[#D9D9D9] text-3xl md:text-5xl font-semibold mb-2 counter"
+              data-target={info.value}
+            >
+              0
+            </div>
+
+            <div class="text-base text-[#D9D9D9]">
+              {info.subtitle}
+            </div>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const counters = document.querySelectorAll(".counter");
+
+    const formatNumber = (num) => {
+      return num.toLocaleString("en-US");
+    };
+
+    counters.forEach((counter) => {
+      const target = Number(counter.getAttribute("data-target")) || 0;
+      const duration = 3000;
+      let startTime = null;
+
+      function animate(timestamp) {
+        if (!startTime) startTime = timestamp;
+
+        const progress = timestamp - startTime;
+        const t = Math.min(progress / duration, 1);
+        const eased = 1 - Math.pow(1 - t, 3);
+
+        const current = Math.floor(target * eased);
+
+        counter.textContent = formatNumber(current);
+
+        if (progress < duration) {
+          requestAnimationFrame(animate);
+        } else {
+          counter.textContent = formatNumber(target);
+        }
+      }
+
+      requestAnimationFrame(animate);
+    });
+  });
+</script>

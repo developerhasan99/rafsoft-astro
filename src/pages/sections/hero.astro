@@ -1,5 +1,5 @@
 ---
-import Image from "astro/components/Image.astro";
+import { Image } from "astro:assets";
 import bgImg from "./images/hero-bg.jpg";
 import winImg from "./images/windows.png";
 ---
@@ -52,7 +52,7 @@ import winImg from "./images/windows.png";
 					</div>
 					<div class="flex gap-2 opacity-80 mb-0">
 						<div>
-							<Image src={winImg} alt="Windows Logos" />
+							<Image src={winImg} alt="Windows Logos" loading="eager" />
 						</div>
 					</div>
 					<div class="flex flex-wrap gap-4 mt-4">

@@ -8,6 +8,7 @@ import TranslateIcon from "./icons/translate-icon.astro"
 import SignIcon from "./icons/sign-icon.astro"
 import UploadIcon from "./icons/upload-icon.astro"
 import DocumentIcon from "./icons/document-icon.astro"
+import LinkIcon from "./icons/link-icon.astro"
 
 
 
@@ -91,14 +92,23 @@ const features = [
 	{
 		icon: DocumentIcon,
 		heading: "Generowanie plików JPK",
-		description: `Dostępne wersje programów<strong>
-						do instalacji na komputerach z systemem Windows lub
-						działające w przeglądarce (fakturowanie online)</strong>. Program do wystawiania faktur pozwala
-					na pracę zdalną
-					przez internet lub w sieci lokalnej<strong>.&nbsp;</strong>Możesz pracować zdalnie w oparciu o
-					lokalny lub zdalny
-					serwer bazy MS SQL, MySQL`
+		description: `Firmy mają obowiązek przekazywania pliku JPK co miesiąc do
+					swoich biur rachunkowych lub bezpośrednio do Ministerstwa
+					Finansów. Nasz <strong>Program do faktur z JPK generuje taki plik w najnowszej
+						wersji JPK_VAT(7), JPK_FA oraz JPK_MAG</strong>. Dodasz <strong>kody GTU</strong> do towarów.`
 	},
+	{
+		icon: LinkIcon,
+		heading: "Integracje",
+		description: `Współpraca z KSeF. Możliwość <a
+						href="http://rafsoft.net/platnosci-online-dotpay-w-programie-fakturavat-2022/"
+						data-wpel-link="internal" target="_self" rel="follow noopener noreferrer"
+						class="text-[#008292] hover:text-[#007281]"><strong>integracji z płatnościami
+							dotpay</strong></a> i automatyczne rozliczanie płatności za fakturę po zapłacie.
+					Integracja z pasażami handlowymi takimi jak <strong>BaseLinker, Allegro, WooCommerce, VirtueMart czy
+						PrestaShop</strong>. Integracja z systemem fakturowania online Mobilna Faktura
+					oraz <strong>Rewizor GT</strong>.`
+	}
 ]
 
 ---
@@ -120,44 +130,6 @@ const features = [
 			{
 				features.map(feature => <FeatureCard Icon={feature.icon} heading={feature.heading} description={feature.description} />)
 			}
-			<div class="text-center group max-w-[330px]">
-				<div
-					class="inline-flex items-center justify-center w-13 h-13 mb-2 fill-[#48D4C2] group-hover:fill-[#19abbd] transition-all duration-300">
-					
-				</div>
-				<h3 class="text-[20px] font-medium text-gray-800 mb-3">
-					
-				</h3>
-				<p class="text-[15px] text-[#707070]">
-					Firmy mają obowiązek przekazywania pliku JPK co miesiąc do
-					swoich biur rachunkowych lub bezpośrednio do Ministerstwa
-					Finansów. Nasz <strong>Program do faktur z JPK generuje taki plik w najnowszej
-						wersji JPK_VAT(7), JPK_FA oraz JPK_MAG</strong>. Dodasz <strong>kody GTU</strong> do towarów.
-				</p>
-			</div>
-			<div class="text-center group">
-				<div
-					class="inline-flex items-center justify-center w-13 h-13 mb-2 fill-[#48D4C2] group-hover:fill-[#19abbd] transition-all duration-300">
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.0012 513">
-						<path
-							d="M220 300q23 4 44-1-5 8-12 15l-78 78q-29 29-70.5 28t-72-31.5Q1 358 0 316.5T27 246l79-79q29-28 70.5-27t71.5 31q21 21 28 49l-3 3q-11 11-27 13-3-24-21-41-20-21-48.5-22T129 191l-78 78q-19 19-18 47t21.5 49Q75 386 103 387t47-18l70-69zm21-267q28-29 70-28t72 31.5q30 30.5 31.5 72T387 179l-79 79q-28 28-70 27t-72-31q-20-21-28-49l3-3q11-11 27-13 4 24 21 41 21 21 49 22t47-18l79-78q19-19 17.5-47t-22-49Q339 39 311 38t-47 18l-69 69q-23-4-45 1 6-8 12-15l79-78zm84 289q32-32 77.5-32t77.5 32q32 32 32 77.5T480 477q-32 32-77.5 32T325 477q-32-32-32-77.5t32-77.5zm142 100q9 0 16-7t7-16.5q0-9.5-7-16.5t-16-7h-41v-40q0-10-6.5-16.5t-16-6.5q-9.5 0-16.5 6.5t-7 16.5v40h-41q-9 0-16 7t-7 16.5q0 9.5 7 16.5t16 7h41v40q0 10 7 17t16.5 7q9.5 0 16-7t6.5-17v-40h41z">
-						</path>
-					</svg>
-				</div>
-				<h3 class="text-[20px] font-medium text-gray-800 mb-3">
-					Integracje
-				</h3>
-				<p class="text-[15px] text-[#707070]">
-					Współpraca z KSeF. Możliwość <a
-						href="http://rafsoft.net/platnosci-online-dotpay-w-programie-fakturavat-2022/"
-						data-wpel-link="internal" target="_self" rel="follow noopener noreferrer"
-						class="text-[#008292] hover:text-[#007281]"><strong>integracji z płatnościami
-							dotpay</strong></a> i automatyczne rozliczanie płatności za fakturę po zapłacie.
-					Integracja z pasażami handlowymi takimi jak <strong>BaseLinker, Allegro, WooCommerce, VirtueMart czy
-						PrestaShop</strong>. Integracja z systemem fakturowania online Mobilna Faktura
-					oraz <strong>Rewizor GT</strong>.
-				</p>
-			</div>
 		</div>
 	</div>
 </section>

@@ -1,0 +1,70 @@
+---
+import { Image } from "astro:assets";
+import Allegro from "./images/logo-allegro.svg";
+import PrestaShop from "./images/prestashop-r6fq48h8oluhnlxrflwjexoomq3rcncvz0pijomqb0.png";
+import Magento from "./images/2560px-Magento-r6fq47jehrt7bzz4l3hwufx81c8e4y95mw212eo4k0.png";
+import WooCommerce from "./images/woocommerce-logo-r6fq47je4m6fzkqak8uarr0puai5x6vsnebttvhge2.png";
+import BaseLinker from "./images/Baselinker-logo-r6fq46lkaxrx0e0hql3a9y5rfyd0x95farejl4pipy.png";
+import Ksiegowosc from "./images/ksiegowosc_new-r6fq48h8oluhnlxrflwjexoomq3rcncvz0pijomqla (1).png";
+---
+
+<section class="bg-white pt-12 pb-4">
+  <div class="max-w-[1120px] mx-auto px-6">
+    <div class="text-center mb-8 text-gray-800 text-3xl">
+      Partnerzy i integracje
+    </div>
+    <div class="grid md:grid-cols-3 lg:grid-cols-6 justify-between items-center gap-8 md:gap-16 mb-12">
+      <Image
+        src={Allegro}
+        alt="Allergro Logo"
+        height={Allegro.height}
+        width={Allegro.width}
+      />
+      <Image
+        src={PrestaShop}
+        alt="PrestaShop Logo"
+        height={PrestaShop.height}
+        width={PrestaShop.width}
+      />
+      <Image
+        src={Magento}
+        alt="Magento Logo"
+        height={Magento.height}
+        width={Magento.width}
+      />
+      <Image
+        src={WooCommerce}
+        alt="WooCommerce Logo"
+        height={WooCommerce.height}
+        width={WooCommerce.width}
+      />
+      <Image
+        src={Ksiegowosc}
+        alt="Ksiegowosc Logo"
+        height={Ksiegowosc.height}
+        width={Ksiegowosc.width}
+      />
+      <Image
+        src={BaseLinker}
+        alt="BaseLinker Logo"
+        height={BaseLinker.height}
+        width={BaseLinker.width}
+      />
+    </div>
+    <div
+      class="bg-[#f8f8f8] py-16 px-6 mt-4 flex flex-col md:flex-row items-center justify-between gap-6"
+    >
+      <div>
+        <h3 class="text-3xl font-medium text-gray-800 mb-8">
+          Bezpłatna wersja programu na 31 dni
+        </h3><p class="text-gray-500 mt-2 font-semibold text-sm">
+          Darmowa wersja programu Faktura VAT 2026
+        </p>
+      </div>
+      <a href="/bezplatne-wersje-demonstracyjne/"
+        class="bg-[#d80100] hover:bg-[#8D0000] hover:bg-raf-redHover text-white px-8 py-3 text-base rounded transition-colors"
+        >Pobierz program</a
+      >
+    </div>
+  </div>
+</section>

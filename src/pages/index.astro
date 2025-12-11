@@ -7,6 +7,7 @@ import PricingSection from "./sections/pricing.astro";
 import ProductDescription from "./sections/product-description.astro";
 import CounterSection from "./sections/counter.astro";
 import TestimonialSection from "./sections/testimonial.astro";
+import PartnerzySection from "./sections/partnerzy.astro";
 ---
 
 <Layout>
@@ -78,7 +79,9 @@ import TestimonialSection from "./sections/testimonial.astro";
 					</div>
 				</div>
 			</div>
-		</section><div id="contact">
+		</section>
+		
+		<div id="contact">
 			<section class="bg-white py-20">
 				<div
 					class="max-w-4xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12"
@@ -136,40 +139,11 @@ import TestimonialSection from "./sections/testimonial.astro";
 						</div>
 					</div>
 				</div>
-			</section><section class="bg-white py-12 border-t border-gray-100">
-				<div class="max-w-6xl mx-auto px-6">
-					<div
-						class="text-center mb-8 text-gray-400 text-sm uppercase tracking-widest font-semibold"
-					>
-						Partnerzy i integracje
-					</div><div
-						class="flex flex-wrap justify-center gap-8 md:gap-16 grayscale opacity-60"
-					>
-						<span class="text-2xl font-bold">allegro</span><span
-							class="text-2xl font-bold">PrestaShop</span
-						><span class="text-2xl font-bold">Magento</span><span
-							class="text-2xl font-bold">WOOCOMMERCE</span
-						><span class="text-2xl font-bold">BaseLinker</span>
-					</div>
-				</div>
-			</section><section
-				class="bg-gray-50 py-16 border-y border-gray-200"
-			>
-				<div
-					class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6"
-				>
-					<div>
-						<h3 class="text-2xl font-bold text-gray-800">
-							Bezpłatna wersja programu na 31 dni
-						</h3><p class="text-gray-500 mt-2 text-sm">
-							Darmowa wersja programu Faktura VAT 2026
-						</p>
-					</div><button
-						class="bg-raf-red hover:bg-raf-redHover text-white px-8 py-3 rounded font-bold transition-colors"
-						>Pobierz program</button
-					>
-				</div>
 			</section>
-		</div>
+
+			</div>
+			
+		<PartnerzySection/>	
+		
 
 </Layout>

@@ -11,13 +11,23 @@ const testimonials = [
   },
   {
     quote:
-      "Bardzo intuicyjny program, świetne wsparcie techniczne i szybka pomoc w razie problemów.",
-    author: "Anna K.",
+      "Program bardzo przejrzysty, faktura w ŚWIETNEJ szacie graficznej. POLECAM",
+    author: "Dariusz S.",
   },
   {
     quote:
-      "Korzystamy w firmie od kilku lat. Stabilny, prosty i robi dokładnie to, czego potrzebujemy.",
-    author: "Piotr S.",
+      "Gratuluje programu - jest czytelny, naprawdę ładnie skonstruowany :).",
+    author: "Piotr M.",
+  },
+  {
+    quote:
+      "Świetny program do faktur bardzo przejrzysty jak dla mnie to bomba, od dawna takiego szukałem.",
+    author: "Łukasz P.",
+  },
+  {
+    quote:
+      "Podoba mi się Państwa program, jest klarowny, profesjonalny i łatwy w użyciu.",
+    author: "Grzegorz K.",
   },
 ];
 ---
@@ -89,17 +99,24 @@ const testimonials = [
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    const track = document.querySelector("[data-testimonial-track]");
+    const track = document.querySelector(
+      "[data-testimonial-track]"
+    ) as HTMLElement | null;
     if (!track) return;
 
-    const slides = Array.from(track.children);
+    const slides = Array.from(track.children) as HTMLElement[];
     const dots = Array.from(
       document.querySelectorAll("[data-testimonial-dot]")
-    );
-    const prevBtn = document.querySelector("[data-testimonial-prev]");
-    const nextBtn = document.querySelector("[data-testimonial-next]");
+    ) as HTMLButtonElement[];
 
-    if (!slides.length || !dots.length) return;
+    const prevBtn = document.querySelector(
+      "[data-testimonial-prev]"
+    ) as HTMLButtonElement | null;
+    const nextBtn = document.querySelector(
+      "[data-testimonial-next]"
+    ) as HTMLButtonElement | null;
+
+    if (slides.length === 0 || dots.length === 0) return;
 
     let current = 0;
     const total = slides.length;
@@ -107,11 +124,11 @@ const testimonials = [
     const ACTIVE = "bg-[#007aff]";
     const INACTIVE = "bg-[#209faf]";
 
-    const goToSlide = (index) => {
+    const goToSlide = (index: number): void => {
       if (index < 0) index = total - 1;
       if (index >= total) index = 0;
-      current = index;
 
+      current = index;
       track.style.transform = `translateX(-${current * 100}%)`;
 
       dots.forEach((dot, i) => {
@@ -132,6 +149,7 @@ const testimonials = [
       dot.addEventListener("click", () => goToSlide(index));
     });
 
+    // initialize slider
     goToSlide(0);
   });
 </script>

@@ -1,1 +1,11 @@
 @import "tailwindcss";
+
+@theme {
+  --link: #008292;
+  --link-hover: #007281;
+}
+
+body {
+    color: #707070;
+}
+

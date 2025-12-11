@@ -1,6 +1,8 @@
 ---
 import { AstroFont } from "astro-font";
 import "../styles/global.css";
+import Navbar from "../partials/navbar.astro";
+import Footer from "../partials/footer.astro";
 ---
 
 <!doctype html>
@@ -29,6 +31,10 @@ import "../styles/global.css";
 		<title>Rafsoft Net website</title>
 	</head>
 	<body>
-		<slot />
+		<Navbar />
+			<main class="[&_a]:text-(--link) [&_a:hover]:text-(--link-hover)">
+				<slot />
+			</main>
+		<Footer />
 	</body>
 </html>

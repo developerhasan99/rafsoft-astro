@@ -1,29 +1,19 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Image from "astro/components/Image.astro";
 import HeroSection from "./sections/hero.astro";
-import Navbar from "../partials/navbar.astro";
 import FeaturesSection from "./sections/features.astro";
-import Footer from "../partials/footer.astro";
 import ProstyProgramSection from "./sections/prosty-program.astro";
 import PricingSection from "./sections/pricing.astro";
-import ProductDrescription from "./sections/product-drescription.astro";
+import ProductDescription from "./sections/product-description.astro";
 ---
 
 <Layout>
-	<Navbar />
-
-	<main>
+	
 		<HeroSection />
-
 		<FeaturesSection />
-
 		<ProstyProgramSection />
-
-		<ProductDrescription />
-
+		<ProductDescription />
 		<PricingSection />
-
 		<section class="bg-raf-dark text-white py-16 border-t border-gray-800">
 			<div
 				class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-12 text-center"
@@ -302,6 +292,5 @@ import ProductDrescription from "./sections/product-drescription.astro";
 				</div>
 			</section>
 		</div>
-		<Footer />
-	</main>
+
 </Layout>

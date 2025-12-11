@@ -1,0 +1,165 @@
+---
+import { Image } from "astro:assets";
+import start_img from "./images/faktura-vat-start.webp";
+import standard_img from "./images/faktura-vat-standard.webp";
+import pro_img from "./images/faktura-vat-pro.webp";
+
+const products = [
+	{
+		image: start_img,
+		altText: "Faktura VAT Start",
+		content: `<a href="/program-faktura-vat-start/" data-wpel-link="internal" target="_self"
+			rel="follow noopener noreferrer"><strong>Faktura VAT 2026 START</strong></a> to prosty program
+		do wystawiania faktur wyposażony we wszystkie
+		funkcje potrzebne do szybkiego wystawiania faktur, jak pobieranie
+		danych z GUS, automatyczne wprowadzanie danych do faktury. Oprócz
+		podstawowych zadań, takich jak wystawianie faktur czy rachunków,
+		mamy tu m.in. generowanie i wysyłkę plików JPK, prowadzenie ewidencji
+		VAT i raportów sprzedaży, tworzenie cenników i baz kontrahentów,
+		ofert, zamówień, raportów kasowych. Możliwość drukowania faktur
+		w wielu językach, archiwizacja danych.`
+	},
+	{
+		image: standard_img,
+		altText: "Faktura VAT Standard",
+		content: `<a href="http://rafsoft.net/program-faktura-vat-standard/" data-wpel-link="internal" target="_self" rel="follow noopener noreferrer"><strong>Faktura VAT 2026 STANDARD</strong></a> zawiera&nbsp; wszystkie elementy wersji START, a dodatkowo program do fakturowania rozszerzony jest m.in. o funkcjonalność seryjnego drukowania, <strong>faktury cykliczne (abonamentowe)</strong>, statystyki z wykresami 3D, czy chociażby tworzenie etykiet adresowych, <strong>adresowanie kopert</strong> i kodów kreskowych. <strong>Program do wystawiania faktur w wersji STANDARD</strong> umożliwia <strong>obsługę wielu podmiotów</strong>– sprawdza się więc m.in. w biurach rachunkowych.`
+	},
+	{
+		image: pro_img,
+		altText: "Faktura VAT Pro",
+		content: `<a href="http://rafsoft.net/program-faktura-vat-pro/" data-wpel-link="internal" target="_self" rel="follow noopener noreferrer"><strong>Faktura VAT 2026 PRO</strong></a> to <a class="wpil_keyword_link " title="program do faktur z magazynem" href="http://rafsoft.net/program-faktura-vat-pro/" data-wpil-keyword-link="linked"><strong>program do faktur z magazynem</strong></a>, a także obsługą małej księgowości. Ten rozbudowany program pozwala na pełne i sprawne <strong>prowadzenie podatkowej księgi przychodów</strong> i rozchodów czy chociażby rozliczanie ryczałtu. Z programu wystawisz dokumenty księgowe min. takie jak VAT-7, PIT-5, obliczysz składki ZUS, kilometrówkę itp. Wystawisz tu również <strong>dokumenty magazynowe – PZ, WZ czy MM</strong>. Ta <strong>najbardziej zaawansowana wersja programu do faktur z magazynem oraz małą księgowością,</strong>&nbsp;posiada też moduł CRM, a także integrację z <b>Allegro oraz sklepami internetowymi osCommerce, Virue Mart, PrestShop i WooCommerce.</b>`
+	}
+]
+
+
+---
+
+
+<section class="py-20">
+	<div class="max-w-7xl mx-auto px-6 space-y-8">
+		<p class="text-[15px] font-semibold leading-[26px]">
+			Wybierz jedną z trzech wersji programu do fakturowania Faktura VAT 2026.
+			Powstały one z myślą o dostosowaniu funkcjonalności oprogramowania na
+			potrzeby konkretnej działalności.
+		</p>
+
+		{ products.map(product => (
+			<div class="flex gap-6 items-center">
+				<div class="shrink-0">
+					<div class="w-36 h-36 flex items-center justify-center">
+						<Image src={product.image} alt={product.altText} />
+					</div>
+				</div>
+				<p class="text-[15px] leading-[26px]" set:html={
+					product.content }>
+				</p>
+			</div>
+		)) }
+		<p>
+			<b>Faktura VAT program.</b>&nbsp; Każda z jego trzech wersji jest na bieżąco,&nbsp;<strong>za darmo
+				aktualizowana</strong>&nbsp;pod kątem nie tylko zmieniających się przepisów prawa podatkowego, ale też
+			potrzeb użytkowników. Dzięki temu rozwiązaniu masz zawsze pewność, że korzystasz z programu aktualnego,
+			zgodnego z przepisami i odpowiadającego specyfice twojej firmy.
+		</p>
+		<p>
+			Każdy użytkownik programu do wystawiania faktur Faktura VAT 2026 zyskuje też dostęp do <strong>bezpłatnej
+				pomocy technicznej</strong>. W razie trudności z obsługą programu nasi specjaliści służą profesjonalnym
+			wsparciem na każdym poziomie.
+		</p>
+		<p>
+			<strong>Fakturowanie w Windows bezpośrednio z programu Faktura VAT 2026</strong>
+		</p>
+		<p>
+			<strong>Wystawianie faktur w programie</strong>&nbsp;jest szybkie i proste. W naszym programie wystawisz
+			następujące dokumenty:
+		</p>
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-8 [&_ul]:list-disc [&_ul]:pl-6">
+			<ul>
+				<li><strong><a href="http://rafsoft.net/faktura-vat-wzor-najwazniejsze-informacje/" target="_self"
+							rel="follow noopener noreferrer">Faktura VAT wzór</a></strong></li>
+				<li>Faktura podatnika zwolnionego z VAT (<strong><a class="wpil_keyword_link" title="faktura bez VAT"
+							href="http://rafsoft.net/faktura-bez-vat/">faktura bez VAT</a></strong>)</li>
+				<li><strong><a href="http://rafsoft.net/faktura-mp/" target="_self"
+							rel="follow noopener noreferrer">Faktura MP – metoda kasowa</a></strong></li>
+				<li><strong><a href="http://rafsoft.net/faktura-pro-forma/" target="_self"
+							rel="follow noopener noreferrer">Faktura pro-forma</a></strong></li>
+				<li><strong><a href="http://rafsoft.net/jak-wystawic-fakture-korygujaca/" target="_self"
+							rel="follow noopener noreferrer">Faktura korekta</a></strong></li>
+				<li><strong><a href="http://rafsoft.net/faktura-zaliczkowa/" target="_self"
+							rel="follow noopener noreferrer">Faktura zaliczkowa</a></strong></li>
+				<li><strong><a href="http://rafsoft.net/faktura-koncowa/" target="_self"
+							rel="follow noopener noreferrer">Faktura końcowa</a></strong></li>
+				<li><strong><a href="http://rafsoft.net/faktura-eksportowa/" target="_self"
+							rel="follow noopener noreferrer">Faktura eksportowa</a></strong></li>
+				<li>Faktura ZŁOM</li>
+				<li>Refaktura - dokument refakturujący</li>
+				<li><strong><a href="http://rafsoft.net/rachunek-kiedy-jak-wystawic/" target="_self"
+							rel="follow noopener noreferrer">Rachunek</a></strong></li>
+				<li><strong><a href="http://rafsoft.net/rachunek-bez-vat/" target="_self"
+							rel="follow noopener noreferrer">Rachunek bez VAT</a></strong></li>
+				<li>Korekta rachunku</li>
+				<li><strong><a href="http://rafsoft.net/paragon-fiskalny/" target="_self"
+							rel="follow noopener noreferrer">Paragon</a></strong></li>
+				<li>Commercial Invoice</li>
+				<li>Commercial Invoice pro-forma</li>
+				<li><strong><a href="http://rafsoft.net/faktura-vat-marza/" target="_self"
+							rel="follow noopener noreferrer">Faktura marża</a></strong></li>
+				<li><strong><a href="http://rafsoft.net/faktura-vat-rr/" target="_self"
+							rel="follow noopener noreferrer">Faktura RR</a></strong></li>
+				<li><strong><a href="http://rafsoft.net/faktura-wewnetrzna/" target="_self"
+							rel="follow noopener noreferrer">Faktura wewnętrzna</a></strong></li>
+				<li><strong><a href="http://rafsoft.net/faktura-zbiorcza/" target="_self"
+							rel="follow noopener noreferrer">Faktura zbiorcza</a></strong></li>
+				<li><strong><a href="http://rafsoft.net/faktura-wdt/" target="_self"
+							rel="follow noopener noreferrer">Faktura WDT</a></strong></li>
+				<li><strong><a href="http://rafsoft.net/faktura-wnt/" target="_self"
+							rel="follow noopener noreferrer">Faktura WNT</a></strong></li>
+				<li>Faktury seryjne</li>
+				<li>Faktury cykliczne, abonamentowe</li>
+			</ul>
+
+			<div>
+				<ul>
+					<li>Przelewy ZUS i do US, przelewy bank-poczta</li>
+					<li>Zamówienia i oferty (zamówienia od klientów, dla dostawców, oferty, zlecenia wewnętrzne)</li>
+					<li><strong><a href="http://rafsoft.net/nota-korygujaca-jak-wystawic/" target="_self"
+								rel="follow noopener noreferrer">Nota korygująca</a></strong></li>
+					<li><strong><a href="http://rafsoft.net/nota-odsetkowa/" target="_self"
+								rel="follow noopener noreferrer">Nota odsetkowa</a></strong></li>
+					<li><strong><a href="http://rafsoft.net/nota-ksiegowa/" target="_self"
+								rel="follow noopener noreferrer">Nota księgowa</a></strong></li>
+					<li><strong><a title="Wezwanie do zapłaty"
+								href="http://rafsoft.net/dokumentacja/druki-druki-firmowe-wezwanie-do-zaplaty/">Wezwanie
+								do zapłaty</a></strong></li>
+					<li>Dokumenty KP, KW, BW, BP (wersja STANDARD i PRO)</li>
+					<li><strong><a href="http://rafsoft.net/split-payment-podzielona-platnosc-vat/" target="_self"
+								rel="follow noopener noreferrer">Split payment – Mechanizm podzielnej
+								płatności</a></strong></li>
+					<li><strong><a href="http://rafsoft.net/nowy-jpk-v7-od-kiedy-obowiazuje/" target="_self"
+								rel="follow noopener noreferrer">Plik JPK_V7</a></strong></li>
+				</ul>
+
+				<p><strong>Dodatkowo w wersji PRO:</strong></p>
+
+				<ul>
+					<li>Stany ilościowe</li>
+					<li>Spis z natury</li>
+					<li>Dokumenty magazynowe: <strong><a href="http://rafsoft.net/dokument-wz/" target="_self"
+								rel="follow noopener noreferrer">WZ</a></strong>, PZ, MM, RW</li>
+					<li>Deklaracje VAT</li>
+					<li>Ewidencje VAT, <strong><a href="http://rafsoft.net/ewidencja-sprzedazy/" target="_self"
+								rel="follow noopener noreferrer">Ewidencja sprzedaży</a></strong></li>
+					<li>Mała Księgowość, PKPiR, <strong><a href="http://rafsoft.net/kpir-ksiega-przychodow-i-rozchodow/"
+								target="_self" rel="follow noopener noreferrer">KPiR</a></strong></li>
+				</ul>
+
+				<p><strong>KSeF, Krajowy System e-Faktur:</strong></p>
+
+				<ul>
+					<li><strong><a href="http://rafsoft.net/faktura-ustrukturyzowana/" target="_self"
+								rel="follow noopener noreferrer">Faktura ustrukturyzowana</a></strong></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>

@@ -7,6 +7,8 @@ import PricingSection from "./sections/pricing.astro";
 import ProductDescription from "./sections/product-description.astro";
 import CounterSection from "./sections/counter.astro";
 import TestimonialSection from "./sections/testimonial.astro";
+import ContactSection from "./sections/contact.astro";
+import Contact from "./sections/contact.astro";
 ---
 
 <Layout>
@@ -16,11 +18,8 @@ import TestimonialSection from "./sections/testimonial.astro";
 		<ProstyProgramSection />
 		<ProductDescription />
 		<PricingSection />
-
 		<CounterSection/>
-		
 		<TestimonialSection/>
-		
 		<section id="blog" class="py-24 bg-gray-50">
 			<div class="max-w-6xl mx-auto px-6">
 				<div class="text-center mb-16">
@@ -78,65 +77,10 @@ import TestimonialSection from "./sections/testimonial.astro";
 					</div>
 				</div>
 			</div>
-		</section><div id="contact">
-			<section class="bg-white py-20">
-				<div
-					class="max-w-4xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12"
-				>
-					<div class="shrink-0">
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							width="24"
-							height="24"
-							viewBox="0 0 24 24"
-							fill="none"
-							stroke="currentColor"
-							stroke-width="2"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							class="lucide lucide-life-buoy w-48 h-48 text-gray-300 stroke-[0.5]"
-							aria-hidden="true"
-							><circle cx="12" cy="12" r="10"></circle><path
-								d="m4.93 4.93 4.24 4.24"></path><path
-								d="m14.83 9.17 4.24-4.24"></path><path
-								d="m14.83 14.83 4.24 4.24"></path><path
-								d="m9.17 14.83-4.24 4.24"></path><circle
-								cx="12"
-								cy="12"
-								r="4"></circle></svg
-						>
-					</div><div class="text-center md:text-left space-y-4">
-						<p class="text-gray-600 text-sm">
-							Użytkownicy korzystający z naszych programów do
-							fakturowania mogą zawsze liczyć na wsparcie naszego
-							zespołu pomocy technicznej.
-						</p><p class="text-gray-600 text-sm">
-							Używasz programu i masz pytania dotyczące jego
-							obsługi?
-						</p><p class="text-gray-600 text-sm">
-							Masz pytania dotyczące programu przed zakupem?
-						</p><div class="space-y-1 pt-4">
-							<a
-								href="#"
-								class="block text-raf-blue hover:underline text-sm font-medium"
-								>Napisz do nas</a
-							><a
-								href="#"
-								class="block text-raf-blue hover:underline text-sm font-medium"
-								>FAQ - Częste pytania i odpowiedzi</a
-							><a
-								href="#"
-								class="block text-raf-blue hover:underline text-sm font-medium"
-								>FILMY INSTRUKTAŻOWE</a
-							><a
-								href="#"
-								class="block text-raf-blue hover:underline text-sm font-medium"
-								>DOKUMENTACJA DO PROGRAMU FAKTURA VAT</a
-							>
-						</div>
-					</div>
-				</div>
-			</section><section class="bg-white py-12 border-t border-gray-100">
+		</section>
+		<div id="contact">
+			<ContactSection />
+			<section class="bg-white py-12 border-t border-gray-100">
 				<div class="max-w-6xl mx-auto px-6">
 					<div
 						class="text-center mb-8 text-gray-400 text-sm uppercase tracking-widest font-semibold"

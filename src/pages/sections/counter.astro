@@ -54,19 +54,19 @@ const CounterInfo = [
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    const counters = document.querySelectorAll(".counter");
+    const counters = document.querySelectorAll<HTMLElement>(".counter");
 
-    const formatNumber = (num) => {
+    const formatNumber = (num: number): string => {
       return num.toLocaleString("en-US");
     };
 
-    counters.forEach((counter) => {
+    counters.forEach((counter: HTMLElement) => {
       const target = Number(counter.getAttribute("data-target")) || 0;
       const duration = 3000;
-      let startTime = null;
+      let startTime: number | null = null;
 
-      function animate(timestamp) {
-        if (!startTime) startTime = timestamp;
+      function animate(timestamp: number) {
+        if (startTime === null) startTime = timestamp;
 
         const progress = timestamp - startTime;
         const t = Math.min(progress / duration, 1);

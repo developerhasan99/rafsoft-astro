@@ -17,13 +17,13 @@ const features = [
 		icon: FileIcon,
 		heading: "Wystawianie faktur i rachunków",
 		description: `Wygodne i szybkie wystawianie faktur VAT bez VAT i
-        rachunków. <strong>Wyszukiwarka firm w bazie GUS</strong>,
-        skróty, automatyczne uzupełnianie nazw firm, fakturowanie
-        seryjne, fakturowanie cykliczne, klonowanie dokumentów.
-        Dodawanie automatyczne firm, towarów i usług po zapisaniu
-        faktury. <strong>Faktury w wielu językach</strong>, waluty,
-        kursy walut. <a href="http://rafsoft.net/split-payment-podzielona-platnosc-vat/"
-        data-wpel-link="internal" target="_self" rel="follow noopener noreferrer"><strong>Split payment</strong></a>.`
+					rachunków. <strong>Wyszukiwarka firm w bazie GUS</strong>,
+					skróty, automatyczne uzupełnianie nazw firm, fakturowanie
+					seryjne, fakturowanie cykliczne, klonowanie dokumentów.
+					Dodawanie automatyczne firm, towarów i usług po zapisaniu
+					faktury. <strong>Faktury w wielu językach</strong>, waluty,
+					kursy walut. <a href="http://rafsoft.net/split-payment-podzielona-platnosc-vat/"
+					data-wpel-link="internal" target="_self" rel="follow noopener noreferrer"><strong>Split payment</strong></a>.`
 	},
 	{
 		icon: ListIcon,
@@ -126,7 +126,7 @@ const features = [
 				<br /> Rachunków, Paragonów...
 			</p>
 		</div>
-		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-12">
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
 			{
 				features.map(feature => <FeatureCard Icon={feature.icon} heading={feature.heading} description={feature.description} />)
 			}

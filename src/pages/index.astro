@@ -8,6 +8,7 @@ import Footer from "../partials/footer.astro";
 import ProstyProgramSection from "./sections/prosty-program.astro";
 import PricingSection from "./sections/pricing.astro";
 import ProductDrescription from "./sections/product-drescription.astro";
+import CounterSection from "./sections/counter.astro";
 ---
 
 <Layout>
@@ -24,78 +25,10 @@ import ProductDrescription from "./sections/product-drescription.astro";
 
 		<PricingSection />
 
-		<section class="bg-raf-dark text-white py-16 border-t border-gray-800">
-			<div
-				class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-12 text-center"
-			>
-				<div class="flex flex-col items-center">
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						width="24"
-						height="24"
-						viewBox="0 0 24 24"
-						fill="none"
-						stroke="currentColor"
-						stroke-width="2"
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						class="lucide lucide-download w-10 h-10 text-teal-400 mb-4"
-						aria-hidden="true"
-						><path d="M12 15V3"></path><path
-							d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
-						></path><path d="m7 10 5 5 5-5"></path></svg
-					><div class="text-4xl font-bold mb-2">7.309</div><div
-						class="text-sm text-gray-400"
-					>
-						Pobranych wersji demo
-					</div>
-				</div><div class="flex flex-col items-center">
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						width="24"
-						height="24"
-						viewBox="0 0 24 24"
-						fill="none"
-						stroke="currentColor"
-						stroke-width="2"
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						class="lucide lucide-users w-10 h-10 text-teal-400 mb-4"
-						aria-hidden="true"
-						><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"
-						></path><path d="M16 3.128a4 4 0 0 1 0 7.744"
-						></path><path d="M22 21v-2a4 4 0 0 0-3-3.87"
-						></path><circle cx="9" cy="7" r="4"></circle></svg
-					><div class="text-4xl font-bold mb-2">1.767</div><div
-						class="text-sm text-gray-400"
-					>
-						Liczba zakupionych licencji
-					</div>
-				</div><div class="flex flex-col items-center">
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						width="24"
-						height="24"
-						viewBox="0 0 24 24"
-						fill="none"
-						stroke="currentColor"
-						stroke-width="2"
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						class="lucide lucide-clock w-10 h-10 text-teal-400 mb-4"
-						aria-hidden="true"
-						><path d="M12 6v6l4 2"></path><circle
-							cx="12"
-							cy="12"
-							r="10"></circle></svg
-					><div class="text-4xl font-bold mb-2">22</div><div
-						class="text-sm text-gray-400"
-					>
-						Lat na rynku
-					</div>
-				</div>
-			</div>
-		</section><section id="reviews" class="bg-sky-400 py-24 text-center">
+		<CounterSection/>
+		
+		
+		<section id="reviews" class="bg-sky-400 py-24 text-center">
 			<div class="max-w-4xl mx-auto px-6">
 				<h2 class="text-3xl font-bold text-raf-dark mb-12">
 					Opinie Klientów

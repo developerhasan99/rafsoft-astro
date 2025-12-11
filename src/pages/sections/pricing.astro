@@ -81,6 +81,8 @@ const plans = [
     ],
   },
 ];
+
+
 ---
 
 <section id="pricing" class="py-25 bg-white">
@@ -98,18 +100,18 @@ const plans = [
       {
         plans.map((plan) => (
           <div
-            class={`flex flex-col justify-between text-white px-10 py-10 ${plan.bgClass} hover:bg-black transition-colors duration-300`}
+            class={`flex flex-col justify-between text-white px-10 py-20 ${plan.bgClass} hover:bg-black transition-colors duration-300`}
           >
             <div>
               {plan.title && (
-                <h2 class="text-white font-medium text-2xl text-center mb-10 leading-relaxed">
+                <h2 class="text-white font-medium text-xl lg:text-2xl text-center mb-10 leading-relaxed">
                   {plan.title}
                 </h2>
               )}
 
               <div class="text-center mb-8">
                 <div
-                  class={`${plan.priceSizeClass ?? "text-5xl"} font-extrabold mb-1`}
+                  class={`${plan.priceSizeClass ?? "text-5xl"} font-extrabold mb-4`}
                 >
                   {plan.price} <span class="text-2xl font-normal">zł</span>
                 </div>
@@ -120,7 +122,7 @@ const plans = [
                 </p>
               </div>
 
-              <ul class="list-disc list-inside space-y-1 text-sm leading-relaxed">
+              <ul class="list-disc list-inside space-y-1 text-base leading-relaxed pl-8">
                 {plan.baseFeatures.map((feature) => (
                   <li>{feature}</li>
                 ))}
@@ -129,8 +131,8 @@ const plans = [
               {plan.extraGroups &&
                 plan.extraGroups.map((group) => (
                   <>
-                    <p class="mt-5 font-semibold text-sm">{group.heading}</p>
-                    <ul class="list-disc list-inside space-y-1 text-sm leading-relaxed">
+                    <p class="my-8 text-base">{group.heading}</p>
+                    <ul class="list-disc list-inside space-y-1 text-base leading-relaxed pl-8">
                       {group.items.map((item) => (
                         <li>{item}</li>
                       ))}
@@ -141,6 +143,7 @@ const plans = [
 
             <div class="mt-10 flex justify-center">
               <a
+                target="_blank"
                 href={plan.href}
                 class="bg-white text-gray-800 font-bold py-2.5 px-10 rounded shadow-[0_0_10px_0_rgba(255,255,255,0.5)] hover:bg-gray-50 transition-colors"
               >
@@ -152,12 +155,51 @@ const plans = [
       }
     </div>
 
-    <div class="text-center mt-12 text-xs text-gray-500 max-w-4xl mx-auto">
+    <div class="text-center mt-12 text-base text-gray-800 max-w-4xl mx-auto">
       Podane ceny są cenami netto, należy doliczyć podatek VAT 23%. Licencja bez
-      limitu stanowisk.<br /><br />
-      Firma RAFSOFT.NET przygotowała trzy programy do fakturowania, dedykowane małym
-      i średnim przedsiębiorstwom: Faktura VAT 2026 START (bez magazynu), Faktura
-      VAT 2026 STANDARD oraz Faktura VAT 2026 PRO (program do faktur z magazynem).
+      limitu stanowisk.
     </div>
+    <p class="mt-12 text-base text-[#3b4f66]">
+      Firma RAFSOFT.NET przygotowała trzy programy do fakturowania, dedykowane
+      małym i średnim przedsiębiorstwom: Faktura VAT 2026 START (<strong
+        >bez magazynu</strong
+      >), Faktura VAT 2026 STANDARD oraz Faktura VAT 2026 PRO (<a
+        class="text-[#008292]"
+        href="/program-faktura-vat-pro/"
+        ><strong>program do faktur z magazynem</strong></a
+      >).
+    </p>
+    <p class="mt-8 text-base text-[#3b4f66]">
+      RAFSOFT.NET oferuje możliwość <strong>darmowego testowania</strong> wszystkich
+      wersji swoich programów do fakturowania <strong>przez okres 31 dni</strong
+      >. To wystarczający czas, aby zapoznać się ze wszystkimi podstawowymi i
+      zaawansowanymi funkcjami oferowanych rozwiązań.
+    </p>
+    <p class="mt-8 text-base text-[#3b4f66]">
+      <strong>Wersja demonstracyjna</strong> programów do fakturowania jest idealnym
+      sposobem na sprawdzenie, czy proponowane funkcje odpowiadają potrzebom prowadzonej
+      działalności. <strong>Darmowa wersja testowa programu</strong> do wystawiania
+      faktur zawiera wszystkie funkcje dostępne w wersji licencjonowanej, co zapewnia
+      użytkownikowi pewność, że po zakupie licencji, wszystkie przetestowane funkcje
+      będą nadal dostępne (ich zakres ani wygląd nie ulegnie zmianie). Po upływie
+      31 dni wszystkie funkcje programu zostaną zablokowane, co oznacza konieczność
+      zakupu licencji, aby kontynuować korzystanie z programu.
+    </p>
+    <p class="mt-8 text-base text-[#3b4f66]">
+      Faktura VAT 2026 PRO to nie tylko program do wystawiania faktur VAT.
+      Zawiera on również moduły <strong>Magazyn i Kasa</strong>, które
+      umożliwiają przedsiębiorcom samodzielne i bez ograniczeń wystawianie
+      podstawowych dokumentów magazynowych i kasowych. Faktura VAT 2026 PRO,
+      jako <strong>program do wystawiania faktur z magazynem</strong>, oferuje
+      pełną funkcjonalność niezbędną do zarządzania zarówno fakturami, jak i
+      stanami magazynowymi. Dodatkowo, dzięki integracji ze sklepem
+      internetowy<strong
+        style="color: #707070; font-size: 15px; text-align: center; white-space-collapse: preserve;"
+        > BaseLinker, Allegro, WooCommerce, VirtueMart czy PrestaShop</strong
+      >, możliwe jest szybkie pobieranie zamówień ze sklepu bezpośrednio do
+      programu, co znacznie ułatwia przygotowanie faktur z zamówień
+      internetowych.
+    </p>
+    <p class="mt-8 text-base text-[#3b4f66]"><b>Przetestuj bezpłatnie nasze programy do fakturowania!</b></p>
   </div>
 </section>

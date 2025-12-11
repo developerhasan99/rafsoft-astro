@@ -1,4 +1,89 @@
-<section id="pricing" class="py-24 bg-white">
+---
+const COMMON_FEATURES = [
+  "Fakturowanie",
+  "Rachunki i paragony",
+  "Kasa i Przelewy",
+  "Cennik, Lista kontrahentów",
+  "Ewidencja VAT i Raport sprzedaży",
+  "Import i Eksport danych",
+  "Elektroniczna wysyłka faktur",
+  "QR Kody",
+  "Archiwizacja danych",
+  "Pliki JPK",
+  "Mobilna Faktura - gratis!",
+  "Darmowe aktualizacje",
+  "Bezpłatna pomoc techniczna!",
+  "Wirtualny asystent pomocy AI",
+  "Interfejs PL, EN, DE, CZ, ES, UA",
+  "KSeF",
+];
+
+const plans = [
+  {
+    id: "start",
+    title: "Program Faktura VAT START (Bestseller)",
+    price: "99",
+    renewPrice: "99",
+    href: "https://ksiegowosc24.pl/zamowienie_new/?add_to=482",
+    bgClass: "bg-[#af5000]",
+    priceSizeClass: "text-6xl",
+    baseFeatures: COMMON_FEATURES,
+    extraGroups: [],
+  },
+  {
+    id: "standard",
+    title: "Program Faktura VAT STANDARD",
+    price: "149",
+    renewPrice: "149",
+    href: "https://ksiegowosc24.pl/zamowienie_new/?add_to=486",
+    bgClass: "bg-[#097a0a]",
+    priceSizeClass: "text-5xl",
+    baseFeatures: COMMON_FEATURES,
+    extraGroups: [
+      {
+        heading: "Dodatkowo:",
+        items: [
+          "Drukowanie seryjne, cykliczne (abonament)",
+          "Wielu podmiotów (biura rachunkowe)",
+          "Poczta – druki pocztowe, adresowanie kopert",
+          "KP, KW, BW i BP",
+        ],
+      },
+    ],
+  },
+  {
+    id: "pro",
+    title: "Program Faktura VAT PROFESSIONAL",
+    price: "219",
+    renewPrice: "219",
+    href: "https://ksiegowosc24.pl/zamowienie_new/?add_to=489",
+    bgClass: "bg-[#014c9b]",
+    priceSizeClass: "text-5xl",
+    baseFeatures: COMMON_FEATURES,
+    extraGroups: [
+      {
+        heading: "Dodatkowo:",
+        items: [
+          "Drukowanie seryjne, cykliczne (abonament)",
+          "Wielu podmiotów (biura rachunkowe)",
+          "Poczta – druki pocztowe, adresowanie kopert",
+          "KP, KW, BW i BP",
+          "Magazyn",
+          "Kasa i Przelewy",
+          "Kilometrówka",
+          "CRM",
+          "Kalendarz i Organizer",
+          "Mała Księgowość (KPiR)",
+          "Raporty i Statystyki",
+          "Integracja z pasażami handlowymi",
+        ],
+      },
+    ],
+  },
+];
+---
+
+<section id="pricing" class="py-25 bg-white">
   <div class="max-w-7xl mx-auto px-6">
     <div class="text-center mb-16">
       <h2 class="text-3xl md:text-4xl font-medium text-gray-800 mb-4">
@@ -10,149 +95,61 @@
     </div>
 
     <div class="grid md:grid-cols-3 gap-8">
-      <!-- START -->
-      <div
-        class="flex flex-col justify-between bg-[#af5000] text-white px-10 py-10"
-      >
-        <div>
-          <div class="text-center mb-8">
-            <div class="text-5xl font-extrabold mb-1">
-              99 <span class="text-2xl font-normal">zł</span>
-            </div>
-            <p class="text-xs">
-              Licencja bez limitu stanowisk / 1 rok<br />
-              Odnowienie licencji 99 zł
-            </p>
-          </div>
-
-          <ul class="list-disc list-inside space-y-1 text-sm leading-relaxed">
-            <li>Fakturowanie</li><li>Rachunki i paragony</li><li>
-              Kasa i Przelewy
-            </li><li>Cennik, Lista kontrahentów</li><li>
-              Ewidencja VAT i Raport sprzedaży
-            </li><li>Import i Eksport danych</li><li>
-              Elektroniczna wysyłka faktur
-            </li><li>QR Kody</li><li>Archiwizacja danych</li><li>
-              Pliki JPK
-            </li><li>Mobilna Faktura - gratis!</li><li>
-              Darmowe aktualizacje
-            </li><li>Bezpłatna pomoc techniczna!</li><li>
-              Wirtualny asystent pomocy AI
-            </li><li>Interfejs PL, EN, DE, CZ, ES, UA</li><li>KSeF</li>
-          </ul>
-        </div>
-
-        <div class="mt-10 flex justify-center">
-          <button
-            class="bg-white text-gray-800 font-bold py-2.5 px-10 rounded shadow hover:bg-gray-50 transition-colors"
+      {
+        plans.map((plan) => (
+          <div
+            class={`flex flex-col justify-between text-white px-10 py-10 ${plan.bgClass} hover:bg-black transition-colors duration-300`}
           >
-            Kup teraz
-          </button>
-        </div>
-      </div>
+            <div>
+              {plan.title && (
+                <h2 class="text-white font-medium text-2xl text-center mb-10 leading-relaxed">
+                  {plan.title}
+                </h2>
+              )}
 
-      <!-- STANDARD -->
-      <div
-        class="flex flex-col justify-between bg-[#097a0a] text-white px-10 py-10"
-      >
-        <div>
-          <div class="text-center mb-8">
-            <div class="text-5xl font-extrabold mb-1">
-              149 <span class="text-2xl font-normal">zł</span>
+              <div class="text-center mb-8">
+                <div
+                  class={`${plan.priceSizeClass ?? "text-5xl"} font-extrabold mb-1`}
+                >
+                  {plan.price} <span class="text-2xl font-normal">zł</span>
+                </div>
+                <p class="text-xs md:text-base">
+                  Licencja bez limitu stanowisk / 1 rok
+                  <br />
+                  Odnowienie licencji {plan.renewPrice} zł
+                </p>
+              </div>
+
+              <ul class="list-disc list-inside space-y-1 text-sm leading-relaxed">
+                {plan.baseFeatures.map((feature) => (
+                  <li>{feature}</li>
+                ))}
+              </ul>
+
+              {plan.extraGroups &&
+                plan.extraGroups.map((group) => (
+                  <>
+                    <p class="mt-5 font-semibold text-sm">{group.heading}</p>
+                    <ul class="list-disc list-inside space-y-1 text-sm leading-relaxed">
+                      {group.items.map((item) => (
+                        <li>{item}</li>
+                      ))}
+                    </ul>
+                  </>
+                ))}
             </div>
-            <p class="text-xs">
-              Licencja bez limitu stanowisk / 1 rok<br />
-              Odnowienie licencji 149 zł
-            </p>
-          </div>
 
-          <ul class="list-disc list-inside space-y-1 text-sm leading-relaxed">
-            <li>Fakturowanie</li><li>Rachunki i paragony</li><li>
-              Kasa i Przelewy
-            </li><li>Cennik, Lista kontrahentów</li><li>
-              Ewidencja VAT i Raport sprzedaży
-            </li><li>Import i Eksport danych</li><li>
-              Elektroniczna wysyłka faktur
-            </li><li>QR Kody</li><li>Archiwizacja danych</li><li>
-              Pliki JPK
-            </li><li>Mobilna Faktura - gratis!</li><li>
-              Darmowe aktualizacje
-            </li><li>Bezpłatna pomoc techniczna!</li><li>
-              Wirtualny asystent pomocy AI
-            </li><li>Interfejs PL, EN, DE, CZ, ES, UA</li><li>KSeF</li>
-          </ul>
-
-          <p class="mt-5 font-semibold text-sm">Dodatkowo:</p>
-          <ul class="list-disc list-inside space-y-1 text-sm leading-relaxed">
-            <li>Drukowanie seryjne, cykliczne (abonament)</li>
-            <li>Wielu podmiotów (biura rachunkowe)</li>
-            <li>Poczta – druki pocztowe, adresowanie kopert</li>
-            <li>KP, KW, BW i BP</li>
-          </ul>
-        </div>
-
-        <div class="mt-10 flex justify-center">
-          <button
-            class="bg-white text-gray-800 font-bold py-2.5 px-10 rounded shadow hover:bg-gray-50 transition-colors"
-          >
-            Kup teraz
-          </button>
-        </div>
-      </div>
-
-      <!-- PRO -->
-      <div class="flex flex-col bg-[#014c9b] text-white px-10 py-10">
-        <div>
-          <div class="text-center mb-8">
-            <div class="text-5xl font-extrabold mb-1">
-              219 <span class="text-2xl font-normal">zł</span>
+            <div class="mt-10 flex justify-center">
+              <a
+                href={plan.href}
+                class="bg-white text-gray-800 font-bold py-2.5 px-10 rounded shadow-[0_0_10px_0_rgba(255,255,255,0.5)] hover:bg-gray-50 transition-colors"
+              >
+                Kup teraz
+              </a>
             </div>
-            <p class="text-xs">
-              Licencja bez limitu stanowisk / 1 rok<br />
-              Odnowienie licencji 219 zł
-            </p>
           </div>
-
-          <ul class="list-disc list-inside space-y-1 text-sm leading-relaxed">
-            <li>Fakturowanie</li><li>Rachunki i paragony</li><li>
-              Kasa i Przelewy
-            </li><li>Cennik, Lista kontrahentów</li><li>
-              Ewidencja VAT i Raport sprzedaży
-            </li><li>Import i Eksport danych</li><li>
-              Elektroniczna wysyłka faktur
-            </li><li>QR Kody</li><li>Archiwizacja danych</li><li>
-              Pliki JPK
-            </li><li>Mobilna Faktura - gratis!</li><li>
-              Darmowe aktualizacje
-            </li><li>Bezpłatna pomoc techniczna!</li><li>
-              Wirtualny asystent pomocy AI
-            </li><li>Interfejs PL, EN, DE, CZ, ES, UA</li><li>KSeF</li>
-          </ul>
-
-          <p class="mt-5 font-semibold text-sm">Dodatkowo:</p>
-          <ul class="list-disc list-inside space-y-1 text-sm leading-relaxed">
-            <li>Drukowanie seryjne, cykliczne (abonament)</li><li>
-              Wielu podmiotów (biura rachunkowe)
-            </li><li>Poczta - druki pocztowe, adresowanie kopert</li><li>
-              KP, KW, BW i BP
-            </li><li>Magazyn</li><li>Kasa i Przelewy</li><li>
-              Kilometrówka
-            </li><li>CRM</li><li>Kalendarz i Organizer</li><li>
-              Mała Księgowość (KPiR)
-            </li><li>Raporty i Statystyki</li><li>
-              Integracja z pasażami handlowymi
-            </li>
-          </ul>
-        </div>
-
-        <div class="mt-10 flex justify-center">
-          <button
-            class="bg-white text-gray-800 font-bold py-2.5 px-10 rounded shadow hover:bg-gray-50 transition-colors"
-          >
-            Kup teraz
-          </button>
-        </div>
-      </div>
+        ))
+      }
     </div>
 
     <div class="text-center mt-12 text-xs text-gray-500 max-w-4xl mx-auto">

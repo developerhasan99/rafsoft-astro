@@ -1,1 +1,408 @@
-<h1>program-faktura-vat-start</h1>
+---
+import Layout from "../../layouts/Layout.astro";
+import page_header_bg_img from "../../images/panel_gorny-1.webp";
+import StartImg from "../../images/faktura-vat-start.webp";
+
+// Accordion component for features
+const features = [
+  {
+    title: "Wystawianie faktur, rachunków, paragonów - lista wystawianych dokumentów",
+    content: `
+      <ul class="space-y-2">
+        <li>Faktura dla płatników VAT i podmiotów nie będących płatnikami VAT</li>
+        <li>Faktura uproszczona i faktura VAT marża</li>
+        <li>Faktura MP, VAT RR, WDT, WNT</li>
+        <li>Faktura wewnętrzna i eksportowa</li>
+        <li>Faktura korekta i splitpayment</li>
+        <li>Faktura ZŁOM i refaktura</li>
+        <li>Faktura wielojęzyczna (angielski, niemiecki, francuski, czeski, szwedzki)</li>
+        <li>Faktury abonamentowe</li>
+        <li>Rachunki i paragony</li>
+        <li>Faktura pro-forma i zaliczkowa</li>
+        <li>Zamówienia i oferty</li>
+      </ul>
+    `
+  },
+  {
+    title: "Pozostałe dokumenty księgowe",
+    content: `
+      <p>Program do wystawiania faktur pozwala na tworzenie następujących dokumentów:</p>
+      <ul class="space-y-2 mt-2">
+        <li>Dokument KP/KW</li>
+        <li>Raport kasowy</li>
+        <li>Przelewy (kolor lub nadruk)</li>
+        <li>Wpłaty na ZUS</li>
+        <li>Rejestr płatności</li>
+        <li>Wezwania do zapłaty</li>
+        <li>Dowody wpłaty</li>
+        <li>Nota korygująca i odsetkowa</li>
+      </ul>
+    `
+  },
+  {
+    title: "Szybkie wystawianie faktur",
+    content: `
+      <h4 class="font-semibold text-lg mb-2">Program do wystawiania faktur umożliwia:</h4>
+      <p class="mb-3">Szybkie wystawianie faktur, szybkie wstawianie kontrahenta, wbudowana wyszukiwarka firm z internetowej bazy GUS, wstawianie po numerze NIP, z listy firm lub po wpisaniu tylko części nazwy.</p>
+      <p class="mb-3">Automatyczne uzupełnianie miejscowości po kodach pocztowych, szybkie wybieranie towaru/usługi. Skróty klawiaturowe, automatyczne budowanie cennika i listy firm.</p>
+      <p class="mb-3"><strong>Weryfikacja dokumentu</strong> przed jego wydrukiem, sprawdzenie poprawności numerów kont, NIP, REGON, kodów pocztowych.</p>
+    `
+  },
+  {
+    title: "Wiele języków, kursy walut NBP i EBC",
+    content: `
+      <h4 class="font-semibold text-lg mb-2">Języki, kursy walut</h4>
+      <p class="mb-3">Możliwość wystawienia dokumentu w różnych językach (angielski, niemiecki, czeski, francuski, szwedzki, możliwość dodania/edycji własnych tłumaczeń). Faktury dwujęzyczne z tłumaczeniem na tej samej stronie lub w danym języku.</p>
+      <p>Program automatycznie pobiera aktualne kursy walut z internetu (NBP) i EBC oraz wbudowanego kalkulatora walut. Dostęp do archiwalnych kursów walut z NBP i EBC.</p>
+    `
+  }
+];
+
+// Customer reviews
+const reviews = [
+  {
+    text: "Program naprawdę przypadł mi do gustu, przyjazny interfejs, łatwość obsługi, skumulowanie tylko najpotrzebniejszych funkcjonalności i to mi właśnie odpowiada...",
+    author: "Mariusz W."
+  },
+  {
+    text: "Program bardzo przejrzysty, faktura w ŚWIETNEJ szacie graficznej. POLECAM",
+    author: "Dariusz S."
+  },
+  {
+    text: "Gratuluje programu - jest czytelny, naprawdę ładnie skonstruowany.",
+    author: "Piotr M."
+  }
+];
+---
+
+<Layout>
+    <!-- Hero Section -->
+    <section class="relative flex items-center min-h-[320px] w-full bg-cover bg-center py-[50px]" style={`background-image: url(${page_header_bg_img.src})`}>
+        <div class="relative container mx-auto px-5 text-left">
+            <h1 class="text-4xl md:text-5xl font-semibold text-white">
+                Program do wystawiania faktur, Faktura VAT 2026 START
+            </h1>
+            <div class="flex text-white text-sm font-semibold uppercase mt-5">
+                <a href="/" class="hover:underline">Strona główna</a>
+                <span class="px-2">»</span>
+                <span>Program do wystawiania faktur, Faktura VAT 2026 START</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-12 max-w-6xl">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Main Content -->
+            <div class="lg:w-2/3">
+                <h2 class="text-3xl font-bold mb-6">Program do wystawiania faktur. Faktura VAT 2026 START</h2>
+                
+                <div class="prose max-w-none">
+                    <p class="text-lg font-medium text-gray-800 mb-6">
+                        Faktura VAT 2026 START to nowoczesny i prosty program do wystawiania faktur dla systemów Windows. 
+                        Dla użytkowników, którzy potrzebują jedynie prostego programu do faktur przygotowaliśmy wersję START. 
+                        Umożliwia wystawienie niezbędnych dokumentów sprzedaży i zakupu, min. faktury VAT, bez VAT, korekty, 
+                        paragony, rachunki, oferty, zamówienia...
+                    </p>
+
+                    <p class="text-lg font-medium text-gray-800 mb-8">
+                        Wygodna i prosta obsługa programu pozwala na pracę osobą, które posiadają małe doświadczenie z komputerem, 
+                        niskim nakładem czasu umożliwi pracę i obsługę w małej bądź średniej firmie. 
+                        Idealne rozwiązanie dla małych i średnich firm handlowo-usługowych. Generowanie pliku JPK.
+                    </p>
+
+                    <div class="bg-blue-50 p-6 rounded-lg mb-8">
+                        <h3 class="text-2xl font-bold mb-4">Program do wystawiania faktur: Podstawowa funkcjonalność</h3>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <ul class="space-y-2">
+                                <li class="flex items-start">
+                                    <svg class="h-5 w-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Wystawianie dokumentów sprzedaży</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="h-5 w-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Kasa i Przelewy</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="h-5 w-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Cennik, Lista kontrahentów</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="h-5 w-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Ewidencja VAT i Raport sprzedaży</span>
+                                </li>
+                            </ul>
+                            <ul class="space-y-2">
+                                <li class="flex items-start">
+                                    <svg class="h-5 w-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Import i Eksport</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="h-5 w-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Archiwizacja danych</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="h-5 w-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>Plik JPK</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="mb-12">
+                        <img 
+                            src={StartImg.src} 
+                            alt="Faktura VAT - program do wystawiania faktur w wersji START" 
+                            class="w-full h-auto rounded-lg shadow-lg border border-gray-200"
+                            width="639" 
+                            height="517"
+                            loading="lazy"
+                        />
+                        <p class="text-sm text-gray-500 mt-2 text-center">Interfejs programu Faktura VAT 2026 START</p>
+                    </div>
+
+                    <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-8">
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <svg class="h-5 w-5 text-yellow-400" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-sm text-yellow-700">
+                                    <strong>WAŻNE:</strong> NASZE PROGRAMY ZAWSZE ZGODNE Z NOWYMI PRZEPISAMI! Faktura JPK (Plik JPK v7). Mechanizm podzielnej płatności – Split payment, VAT OSS, GTU.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2 class="text-2xl font-bold mb-6">Faktura VAT 2026 START - opis funkcji</h2>
+
+                    <!-- Features Accordion -->
+                    <div class="space-y-4 mb-12">
+                        {features.map((feature, index) => (
+                            <div class="border border-gray-200 rounded-lg overflow-hidden" x-data="{ open: false }">
+                                <button 
+                                    @click="open = !open"
+                                    class="w-full px-6 py-4 text-left font-medium text-gray-700 bg-gray-50 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 flex justify-between items-center"
+                                    :aria-expanded="open"
+                                >
+                                    <span>{feature.title}</span>
+                                    <svg 
+                                        class="h-5 w-5 text-gray-500 transform transition-transform duration-200" 
+                                        :class="{ 'rotate-180': open }"
+                                        xmlns="http://www.w3.org/2000/svg" 
+                                        viewBox="0 0 20 20" 
+                                        fill="currentColor"
+                                    >
+                                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                    </svg>
+                                </button>
+                                <div 
+                                    x-show="open" 
+                                    x-transition:enter="transition ease-out duration-200"
+                                    x-transition:enter-start="opacity-0"
+                                    x-transition:enter-end="opacity-100"
+                                    x-transition:leave="transition ease-in duration-150"
+                                    x-transition:leave-start="opacity-100"
+                                    x-transition:leave-end="opacity-0"
+                                    class="px-6 py-4 bg-white border-t border-gray-200"
+                                    x-cloak
+                                >
+                                    <div class="prose max-w-none" set:html={feature.content} />
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
+                    <!-- Customer Reviews -->
+                    <div class="bg-gray-50 p-6 rounded-lg mb-8">
+                        <h3 class="text-2xl font-bold mb-6 text-center">Opinie naszych klientów</h3>
+                        <div class="grid md:grid-cols-3 gap-6">
+                            {reviews.map((review, index) => (
+                                <div key={index} class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                                    <div class="text-yellow-400 mb-3">
+                                        {[...Array(5)].map((_, i) => (
+                                            <svg class="w-5 h-5 inline-block" fill="currentColor" viewBox="0 0 20 20">
+                                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                            </svg>
+                                        ))}
+                                    </div>
+                                    <p class="text-gray-700 mb-4 italic">"{review.text}"</p>
+                                    <p class="font-medium text-gray-900">{review.author}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    <!-- Call to Action -->
+                    <div class="bg-blue-50 p-6 rounded-lg text-center">
+                        <h3 class="text-2xl font-bold mb-4">Zainteresowany naszym programem?</h3>
+                        <p class="mb-6">Pobierz wersję demonstracyjną lub kup pełną wersję już teraz!</p>
+                        <div class="flex flex-col sm:flex-row justify-center gap-4">
+                            <a href="/bezplatne-wersje-demonstracyjne/" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors">
+                                Pobierz wersję demonstracyjną
+                            </a>
+                            <a href="https://ksiegowosc24.pl/sklep/" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-blue-700 bg-white hover:bg-gray-50 border-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors">
+                                Kup teraz
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="lg:w-1/3 space-y-6">
+                <div class="bg-white p-6">
+                    <img 
+                        src={StartImg.src} 
+                        alt="Faktura VAT 2026 START" 
+                        class="w-full h-auto mb-4 rounded"
+                        width="220" 
+                        height="244"
+                        loading="lazy"
+                    />
+                    <div class="space-y-3 text-[16px] uppercase">
+                        <a href="/bezplatne-wersje-demonstracyjne/" class="block w-full text-center px-4 py-3 bg-[#eee] hover:bg-[#008292] text-[#222] hover:text-white font-medium transition-colors">
+                            Pobierz program
+                        </a>
+                        <a href="https://ksiegowosc24.pl/sklep/" class="block w-full text-center px-4 py-3 bg-[#eee] hover:bg-[#008292] text-[#222] hover:text-white font-medium transition-colors">
+                            Kup teraz
+                        </a>
+                        <a href="/cennik-faktura-vat/" class="block w-full text-center px-4 py-3 bg-[#eee] hover:bg-[#008292] text-[#222] hover:text-white font-medium transition-colors">
+                            Porównaj wersje
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                    <h3 class="text-lg font-bold mb-4">Potrzebujesz pomocy?</h3>
+                    <p class="text-gray-700 mb-4">Nasi konsultanci są do Twojej dyspozycji od poniedziałku do piątku w godzinach 8:00 - 16:00</p>
+                    <div class="space-y-2">
+                        <div class="flex items-center">
+                            <svg class="h-5 w-5 text-gray-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                            </svg>
+                            <a href="tel:+48123456789" class="text-blue-600 hover:underline">+48 12 345 67 89</a>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="h-5 w-5 text-gray-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            <a href="mailto:biuro@rafsoft.pl" class="text-blue-600 hover:underline">biuro@rafsoft.pl</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</Layout>
+
+<!-- Alpine JS for accordion functionality -->
+<script src="//unpkg.com/alpinejs" defer></script>
+
+<style>
+    [x-cloak] { display: none !important; }
+    .prose ul > li {
+        margin: 0.5em 0;
+    }
+    .prose ul {
+        margin: 1em 0;
+        padding-left: 1.5em;
+    }
+</style>
+    NASZE PROGRAMY ZAWSZE ZGODNE Z NOWYMI PRZEPISAMI! — JPK v7, split payment, VAT OSS, GTU
+  </p>
+
+  <ul>
+    <li>Generowanie plików JPK: JPK_V7, JPK_FA, JPK_MAG</li>
+  </ul>
+
+  <h2>Faktura VAT 2026 START – opis funkcji</h2>
+
+
+  <!-- Accordion Start -->
+  <div class="space-y-4">
+
+    <!-- Item 1 -->
+    <details class="border p-4 rounded">
+      <summary class="cursor-pointer font-semibold">
+        Wystawianie faktur, rachunków, paragonów - lista wystawianych dokumentów
+      </summary>
+      <ul class="mt-3">
+        <li><strong>Faktura VAT i Faktura bez VAT</strong></li>
+        <li><strong>Faktura uproszczona</strong></li>
+        <li><strong>Faktura VAT marża</strong></li>
+        <li><strong>Faktura MP</strong></li>
+        <li><strong>Faktura eksportowa</strong></li>
+        <li><strong>Faktura zaliczkowa</strong></li>
+        <li><strong>Paragon</strong></li>
+        <li><strong>Commercial Invoice</strong></li>
+        <li><strong>Oferta dla klienta</strong></li>
+      </ul>
+    </details>
+
+    <!-- Item 2 -->
+    <details class="border p-4 rounded">
+      <summary class="cursor-pointer font-semibold">Pozostałe dokumenty księgowe</summary>
+      <ul class="mt-3">
+        <li>Dokument KP/KW</li>
+        <li>Raport kasowy</li>
+        <li>Przelewy</li>
+        <li>Rejestr płatności</li>
+        <li>Wnioski do zapłaty</li>
+      </ul>
+    </details>
+
+    <!-- Item 3 -->
+    <details class="border p-4 rounded">
+      <summary class="cursor-pointer font-semibold">Szybkie wystawianie faktur</summary>
+      <p class="mt-3">
+        Wyszukiwarka firm GUS, automatyczne uzupełnianie danych, listy towarów, skróty klawiszowe, klonowanie dokumentów.
+      </p>
+    </details>
+
+    <!-- Item 4 -->
+    <details class="border p-4 rounded">
+      <summary class="cursor-pointer font-semibold">Definiowanie wyglądu faktury</summary>
+      <p class="mt-3">
+        7 gotowych wzorów faktur, logo, pieczątki, własne uwagi, własna numeracja.
+      </p>
+    </details>
+
+    <!-- Item 5 -->
+    <details class="border p-4 rounded">
+      <summary class="cursor-pointer font-semibold">Wiele języków, kursy walut</summary>
+      <p class="mt-3">
+        Automatyczne pobieranie kursów NBP i EBC, faktury wielojęzyczne.
+      </p>
+    </details>
+
+    <!-- Item 6 -->
+    <details class="border p-4 rounded">
+      <summary class="cursor-pointer font-semibold">Listy i Raporty</summary>
+      <p class="mt-3">
+        Lista firm, cenniki, eksport/import danych, raporty sprzedaży.
+      </p>
+    </details>
+
+  </div>
+  <!-- Accordion End -->
+
+</section>
+
+</Layout>
